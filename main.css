@@ -1,4 +1,10 @@
-
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
 header {
     background-color: rgb(255, 255, 255);
@@ -32,7 +38,7 @@ nav li {
 
 .container {
     position: absolute;
-    margin-left: 75%;
+    margin-left: 77%;
     margin-top: .01%
 }
 
@@ -64,6 +70,18 @@ nav li {
     font-size: 50px;
 }
 
+.about-text { grid-area: item1; }
+.glaze { grid-area: item2; }
+.flower { grid-area: item3; }
+.about-text2 { grid-area: item4; }
+
+.about-section {
+    display: grid;
+    grid-template-areas: 
+    'item1 item1 item2 item2'
+    'item3 item4 item2 item2';
+    gap: 50px;
+}
 
 body {
     font-family: "Lucida Sans", "Lucida Sans Regular", 
@@ -87,7 +105,7 @@ hr {
 }
 
 .items a{
-    color: orange
+    color: #BF7631;
 }
 
 .contactinfo {
@@ -100,14 +118,14 @@ hr {
 
 input[type=button] {
     color: white;
-    background-color: orange;
+    background-color: #BF7631;
     margin-left: 47%;
     text-decoration: none;
     border: none;
 }
 
 footer {
-    background-color: orange;
+    background-color: #BF7631;
     color: black;
 }
 
@@ -115,5 +133,9 @@ footer {
     padding: 30px;
     gap: 50px;
     margin-left: 37%;
+}
 
+.copyright {
+    margin-left: 20%;
+    font-size: small;
 }
